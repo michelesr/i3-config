@@ -214,5 +214,6 @@ exec --no-startup-id xinput --set-prop 12 'libinput Accel Speed' 1
 
 # set background
 exec --no-startup-id feh --bg-fill ~/Pictures/vulcanart.png
+
 for_window [class="mednafen"] inhibit_idle focus
 for_window [class="mame"] inhibit_idle focus
