@@ -215,3 +215,4 @@ exec --no-startup-id feh --bg-fill ~/Pictures/vulcanart.png
 
 for_window [class="mednafen"] inhibit_idle focus
 for_window [class="mame"] inhibit_idle focus
+for_window [class="openmw"] inhibit_idle focus
