@@ -74,7 +74,7 @@ bindsym Shift+Print exec ~/.config/i3/screenshot.sh rect
 bindsym Mod1+Sys_Req exec ~/.config/i3/screenshot.sh active_window
 
 # border and decoration toggle
-# default_border none
+default_border none
 
 bindsym $mod+c border toggle
 
@@ -125,8 +125,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# destroy/create i3bar
-bindsym $mod+Mod1+h exec killall i3bar || i3bar --bar_id bar-0
+# show/hide status bar
+bindsym $mod+Mod1+s bar mode dock
+bindsym $mod+Mod1+h bar mode hide
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -217,6 +218,9 @@ exec --no-startup-id xset r rate 200 40
 # set background
 exec --no-startup-id feh --bg-fill ~/Pictures/vulcanart.png
 
+for_window [class="openmw"] inhibit_idle focus
+for_window [class="supertuxkart"] inhibit_idle focus
+for_window [class="PPSSPPSDL"] inhibit_idle focus
+
 for_window [class="mednafen"] inhibit_idle focus
 for_window [class="mame"] inhibit_idle focus
-for_window [class="openmw"] inhibit_idle focus
