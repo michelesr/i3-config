@@ -39,7 +39,8 @@ exec --no-startup-id dunst
 
 exec --no-startup-id nextcloud
 exec --no-startup-id keepassxc
-exec --no-startup-id redshift
+# redshift fork
+exec --no-startup-id gammastep -m randr
 
 set $keyring "/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh"
 exec --no-startup-id $keyring
