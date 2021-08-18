@@ -42,9 +42,6 @@ exec --no-startup-id keepassxc
 # redshift fork
 exec --no-startup-id gammastep -m randr
 
-set $keyring "/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh"
-exec --no-startup-id $keyring
-
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -192,6 +189,11 @@ mode "resize" {
   # back to normal: Enter or Escape or $mod+r
   bindsym Return mode "default"
   bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
+}
+
+# this mode ignores any shortcut except $mod+r
+mode "ignore" {
   bindsym $mod+r mode "default"
 }
 
