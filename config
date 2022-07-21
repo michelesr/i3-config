@@ -14,7 +14,7 @@ set $right l
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Cantarell Mono 11
+font pango:Literation Sans Nerd Font 11
 
 # Screen lock
 set $lock loginctl lock-session
@@ -39,18 +39,25 @@ exec --no-startup-id dunst
 
 exec --no-startup-id nextcloud
 exec --no-startup-id keepassxc
+
 # redshift fork
 exec --no-startup-id gammastep -m randr
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioStop exec playerctl stop
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+bindsym XF86Explorer exec nautilus
+bindsym XF86HomePage exec firefox
+bindsym XF86Calculator exec gnome-calculator
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -222,8 +229,13 @@ exec --no-startup-id xset r rate 200 40
 exec --no-startup-id feh --bg-fill ~/Pictures/vulcanart.png
 
 for_window [class="openmw"] inhibit_idle focus
+for_window [class="DaggerfallUnity.x86_64"] inhibit_idle focus
+for_window [class="oblivion.exe"] inhibit_idle focus
 for_window [class="supertuxkart"] inhibit_idle focus
 for_window [class="PPSSPPSDL"] inhibit_idle focus
+for_window [class="Pcsx2"] inhibit_idle focus
 
 for_window [class="mednafen"] inhibit_idle focus
 for_window [class="mame"] inhibit_idle focus
+for_window [class="QjackCtl" title="^JACK Audio.*$"] floating enable
+for_window [class="gnome-calculator"] floating enable
