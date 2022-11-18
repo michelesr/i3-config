@@ -233,7 +233,7 @@ for_window [class="DaggerfallUnity.x86_64"] inhibit_idle focus
 for_window [class="oblivion.exe"] inhibit_idle focus
 for_window [class="supertuxkart"] inhibit_idle focus
 for_window [class="PPSSPPSDL"] inhibit_idle focus
-for_window [class="Pcsx2"] inhibit_idle focus
+for_window [class="pcsx2-qt"] inhibit_idle focus
 
 for_window [class="mednafen"] inhibit_idle focus
 for_window [class="mame"] inhibit_idle focus
