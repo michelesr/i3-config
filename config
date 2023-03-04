@@ -174,10 +174,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# this mode ignores any shortcut except $mod+r
+# this mode ignores any shortcut except $mod+$alt+i
 mode "ignore" {
-  bindsym $mod+r mode "default"
+  bindsym $mod+$alt+i mode "default"
 }
+
+bindsym $mod+$alt+i mode ignore
 
 # status bar
 bar {
