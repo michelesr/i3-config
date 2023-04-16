@@ -211,3 +211,5 @@ for_window [class="mednafen"] inhibit_idle focus
 for_window [class="mame"] inhibit_idle focus
 for_window [class="QjackCtl" title="^JACK Audio.*$"] floating enable
 for_window [class="gnome-calculator"] floating enable
+for_window [class="modorganizer.exe" title="modorganizer"] floating enable
+for_window [class="modorganizer.exe" title="modorganizer"] border normal
