@@ -24,7 +24,7 @@ bindsym $mod+z exec $lock
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xset -dpms
 exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/michele/.config/i3/lock.sh
-exec --no-startup-id xset s 300
+exec --no-startup-id xset s 900
 
 # startup apps
 
